@@ -107,6 +107,7 @@ function unmark {
 function marks {
     ls -l $MARKPATH | sed 's/  / /g' | cut -d' ' -f9- | sed 's/ -/\t-/g' && echo
 }
+alias j='jump'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
