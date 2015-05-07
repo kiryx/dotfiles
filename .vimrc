@@ -26,10 +26,11 @@ set incsearch
 
 " Execute 'make' in current directory
 map <F9> <Esc>:w<CR>:!make<CR><CR>
+map <leader>q <Esc>:w<CR>:!make<CR><CR>
 set noswapfile
 set nobackup
-nmap <leader>f :buffers<CR>:buffer<Space>
-nmap <leader>g :buffers<CR>:bdelete<Space>
+map <leader>f :buffers<CR>:buffer<Space>
+map <leader>g :buffers<CR>:bdelete<Space>
 map <S-CR> O<Esc>j
 
 """ j and k will not jump over the line breaks
