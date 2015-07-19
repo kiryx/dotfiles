@@ -1,19 +1,18 @@
-""" USEFUL:
-" :so %  "Reloads .vimrc
 execute pathogen#infect()
+let mapleader = ","
 set nocompatible "Turn the vi compatibility off
-set bs=2 "Backspace in insert will work as expected
+set bs=2 "Enable backspace in insert mode
 set number "Enable line numbering
 set ic "Ignore-case when searching
 set cpoptions+=$ "Display dollar sign when changing
 set go-=m "No menu
 set go-=T "No taskbar
-set undofile "Undo list is tracked for each file separately
-set hidden "Allows to navigate between buffers without saving the files
+set undofile "Create undo list for each edited file
+set hidden "Enables navigation between buffers without saving
 syntax on "Set syntax highlighting on
 
-" Dark background of solarized theme
-colorscheme solarized
+"colorscheme solarized
+colorscheme monokai
 set background=dark
 call togglebg#map("<F5>") " Alternate between light/dark background
 
@@ -23,30 +22,36 @@ set smarttab
 set smartcase
 set hlsearch
 set incsearch
-
-" Execute 'make' in current directory
-map <F9> <Esc>:w<CR>:!make<CR><CR>
-map <leader>q <Esc>:w<CR>:!make<CR><CR>
 set noswapfile
 set nobackup
+
+" Execute 'make' command in current directory
+map <leader>v <Esc>:w<CR>:!make<CR><CR>
+
+"Changing buffers
 map <leader>f :buffers<CR>:buffer<Space>
+
+"Deleting buffers
 map <leader>g :buffers<CR>:bdelete<Space>
+
+"Puts newline above current line
 map <S-CR> O<Esc>j
 
+map <C-i> :NERDTreeToggle<CR>
+
 """ j and k will not jump over the line breaks
-nmap j gj
-nmap k gk
+"nmap j gj
+"nmap k gk
 
 """ Jump between the buffers
 nmap <C-n> :bnext<CR>
 nmap <C-p> :bprev<CR>
 
-let mapleader = ","
 
 """ Displaying special characters (tabs, eol):
-"" \e turns switches the displaing on/off
+" turns switches the displaing on/off
 nmap <leader>r :set list!<CR>
-"" List of chars definition
+" List of chars definition
 set listchars=tab:¦ ,trail:▸,eol:¬
 
 "" Turns off displaying at the start
@@ -72,18 +77,18 @@ nnoremap <Space> za
 
 set guifont=Monospace\ 9
 
-"SPLITS NAVIGATION CTRL-HJKL instead CTRL-W HJKL
+" Navigate the splits with C-{hjkl}
 nnoremap <C-j> <C-w>+
 nnoremap <C-k> <C-w>-
 nnoremap <C-l> <C-w>>
 nnoremap <C-h> <C-w><
 
-" otwiera splity dol, prawo
+" Splits the windows below and right to the current one
 set splitbelow
 set splitright
 
 " Relative line counting instead of absolute
-nnoremap <F3> :NumbersToggle<CR>
+nnoremap <leader>z :NumbersToggle<CR>
 
 filetype plugin indent on
 
@@ -94,11 +99,10 @@ let g:syntastic_python_pep8_args='--ignore=E501'
 " pylint ignores: F0401(imports), W0142(*magic)
 "let g:syntastic_python_pylint_args='--disable=F0401,W0142'
 
-""" SPELLING """
-"" No spelling by default, but set up the English dictionary
+" No spelling by default, but set up the English dictionary as default
 set nospell spelllang=en
 nmap <leader>s :set spell!<CR>
-"" Spelling on by default for .tex files
+" Spelling on by default for .tex files
 au BufReadPost *.tex setlocal spell spelllang=en
 
 "------- FOLDING ----
