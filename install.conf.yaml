@@ -8,6 +8,7 @@
     ~/.local/bin: bin/
     ~/.bashrc: bashrc
     ~/.xmodmaprc: xmodmaprc
+    ~/.zshrc: zshrc
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
