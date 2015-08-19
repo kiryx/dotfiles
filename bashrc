@@ -110,17 +110,11 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-PATH=$PATH:/home/$USER/.local/bin
-export PATH
-
-C_INCLUDE_PATH=/home/$USER/.local/include
-export C_INCLUDE_PATH
-
-CPLUS_INCLUDE_PATH=/home/$USER/.local/include
-export CPLUS_INCLUDE_PATH
-
-LIBRARY_PATH=/home/$USER/.local/lib
-export LIBRARY_PATH
+export PATH=$PATH:/home/$USER/.local/bin
+export C_INCLUDE_PATH=/home/$USER/.local/include
+export CPLUS_INCLUDE_PATH=/home/$USER/.local/include
+export LIBRARY_PATH=/home/$USER/.local/lib
+export PYTHONPATH=/home/$USER/.local/lib/python2.7/site-packages
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
