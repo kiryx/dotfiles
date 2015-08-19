@@ -78,20 +78,8 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
-alias matlab='~/soft/Matlab/bin/matlab'
-alias weka='java -jar ~/soft/weka/weka.jar'
-export TODOTXT_DEFAULT_ACTION=ls
-alias t='$HOME/bin/todo/todo.sh'
-alias r='$HOME/bin/remind/todo.sh'
+alias l='ls -AlhF'
 alias fixkeys='xmodmap ~/.xmodmaprc'
-alias dual='xrandr --output VGA1 --auto --primary --left-of LVDS1 --output LVDS1 --auto ; fixkeys'
-alias single='xrandr --output VGA1 --off ; fixkeys'
-
-export MYBEEP=/usr/share/sounds/KDE-Im-Message-In.ogg
-alias beep='aplay $MYBEEP'
 
 # jump functions
 export MARKPATH=$HOME/.marks
@@ -122,16 +110,16 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-PATH=$PATH:/home/$USER/bin
+PATH=$PATH:/home/$USER/.local/bin
 export PATH
 
-C_INCLUDE_PATH=/home/$USER/include
+C_INCLUDE_PATH=/home/$USER/.local/include
 export C_INCLUDE_PATH
 
-CPLUS_INCLUDE_PATH=/home/$USER/include
+CPLUS_INCLUDE_PATH=/home/$USER/.local/include
 export CPLUS_INCLUDE_PATH
 
-LIBRARY_PATH=/home/$USER/lib
+LIBRARY_PATH=/home/$USER/.local/lib
 export LIBRARY_PATH
 
 # enable programmable completion features (you don't need to enable
