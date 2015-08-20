@@ -65,7 +65,7 @@ export PATH=$PATH:$HOME/.local/bin
 export C_INCLUDE_PATH=$HOME/.local/include
 export CPLUS_INCLUDE_PATH=$HOME/.local/include
 export LIBRARY_PATH=$HOME/.local/lib
-export PYTHONPATH=$HOME/.local/lib/python2.7/site-packages:$PYTHONPATH
+# export PYTHONPATH=$HOME/.local/lib/python2.7/site-packages:$PYTHONPATH
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
