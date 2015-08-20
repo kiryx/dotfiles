@@ -11,8 +11,8 @@ set undofile " Create undo list for each edited file
 set hidden " Enables navigation between buffers without saving
 syntax on " Set syntax highlighting on
 
-"colorscheme solarized
-colorscheme monokai
+colorscheme solarized
+"colorscheme monokai
 set background=dark
 call togglebg#map("<F5>") " Alternate between light/dark solarized background
 
