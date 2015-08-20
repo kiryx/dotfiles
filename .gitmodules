@@ -13,3 +13,6 @@
 [submodule "vim/bundle/numbers"]
 	path = vim/bundle/numbers
 	url = https://github.com/b3niup/numbers.vim
+[submodule "vim/bundle/fugitive"]
+	path = vim/bundle/fugitive
+	url = https://github.com/tpope/vim-fugitive.git
