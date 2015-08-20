@@ -49,14 +49,23 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git vi-mode z)
+export KEYTIMEOUT=10
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
+
+alias l='ls -AlhF'
+alias fixkeys='xmodmap ~/.xmodmaprc'
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games"
+export PATH=$PATH:/home/$USER/.local/bin
+export C_INCLUDE_PATH=/home/$USER/.local/include
+export CPLUS_INCLUDE_PATH=/home/$USER/.local/include
+export LIBRARY_PATH=/home/$USER/.local/lib
+export PYTHONPATH=/home/$USER/.local/lib/python2.7/site-packages
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
