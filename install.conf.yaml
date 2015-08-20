@@ -5,8 +5,6 @@
     ~/.tmux.conf: tmux.conf
     ~/.vim: vim/
     ~/.vimrc: vimrc
-    ~/.local/bin: bin/
-    ~/.bashrc: bashrc
     ~/.xmodmaprc: xmodmaprc
     ~/.zshrc: zshrc
 
