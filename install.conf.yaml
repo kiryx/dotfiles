@@ -1,6 +1,3 @@
-- shell:
-  - [git submodule update --init --recursive, Installing submodules]
-
 - clean: ['~']
 
 - link:
@@ -10,3 +7,6 @@
     ~/.vimrc: vimrc
     ~/.xmodmaprc: xmodmaprc
     ~/.zshrc: zshrc
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
