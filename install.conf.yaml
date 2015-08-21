@@ -7,6 +7,8 @@
     ~/.vimrc: vimrc
     ~/.xmodmaprc: xmodmaprc
     ~/.zshrc: zshrc
+    ~/.gitconfig: gitconfig
+    ~/.gitignore_global: gitignore_global
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
