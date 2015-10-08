@@ -91,3 +91,6 @@ export LD_LIBRARY_PATH=$HOME/.local/lib
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+source /usr/local/bin/virtualenvwrapper.sh
+export WORKON_HOME=~/virtualenvs
+xmodmap ~/.xmodmaprc
