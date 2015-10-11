@@ -1,6 +1,6 @@
 [user]
 	name = Krzysztof Nowak
-	email = k.nowak@cern.ch
+	email = kn@linux.com
 [core]
 	excludesfile = /$HOME/.gitignore_global
 	pager = less -r
