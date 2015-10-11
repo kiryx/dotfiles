@@ -59,7 +59,7 @@ export KEYTIMEOUT=10
 source $ZSH/oh-my-zsh.sh
 
 alias l='ls -AlhF'
-alias fixkeys='xmodmap ~/.xmodmaprc'
+alias swapkeys='setxkbmap -option caps:swapescape'
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games"
 export PATH=$PATH:$HOME/.local/bin
 export C_INCLUDE_PATH=$HOME/.local/include
@@ -93,4 +93,5 @@ export LD_LIBRARY_PATH=$HOME/.local/lib
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 source /usr/local/bin/virtualenvwrapper.sh
 export WORKON_HOME=~/virtualenvs
-xmodmap ~/.xmodmaprc
+fpath=(~/.zsh/completion $fpath)
+autoload -Uz compinit && compinit -i
