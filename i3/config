@@ -13,7 +13,7 @@
 #
 # power manager
 exec xfce4-power-manager &
-exec xmodmap ~/.xmodmaprc
+exec setxkbmap -option caps:swapescape
 exec xset b off
 exec --no-startup-id nm-applet
 
