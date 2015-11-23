@@ -8,6 +8,7 @@
     ~/.xmodmaprc: xmodmaprc
     ~/.zshrc: zshrc
     ~/.gitconfig: gitconfig
+    ~/.inputrc: inputrc
     ~/.gitignore_global: gitignore_global
     ~/.i3: i3/
 
