@@ -38,6 +38,8 @@ map <leader>g :buffers<CR>:bdelete<Space>
 map <S-CR> O<Esc>j
 
 map <C-i> :NERDTreeToggle<CR>
+let NERDTreeShowHidden=1
+set colorcolumn=80
 
 "" Navigation 'j' and 'k' will not jump over the line breaks
 "nmap j gj
@@ -91,9 +93,9 @@ nnoremap <leader>z :NumbersToggle<CR>
 filetype plugin indent on
 
 let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_python_checkers = ['pyflakes', 'pep8']
+let g:syntastic_python_checkers = ['pyflakes', 'pep8', 'pep257']
 "" pep8 will ignore: E501(line length)
-let g:syntastic_python_pep8_args='--ignore=E501'
+" let g:syntastic_python_pep8_args='--ignore=E501'
 "" pylint will ignore: F0401(imports), W0142(*magic)
 "let g:syntastic_python_pylint_args='--disable=F0401,W0142'
 
@@ -127,3 +129,33 @@ fu! CustomFoldText()
     return line . expansionString . foldSizeStr . foldPercentage . foldLevelStr
 endf
 set foldtext=CustomFoldText()
+
+" Isort for Python (DOESNT WORK AT THE MOMENT)
+let g:vim_isort_map = ''
+
+" Author: Bernardo Fontes <falecomigo@bernardofontes.net>
+" Website: http://www.bernardofontes.net
+" This code is based on this one: http://www.cmdln.org/wp-content/uploads/2008/10/python_ipdb.vim
+" I worked with refactoring and it simplifies a lot the remove breakpoint feature.
+" To use this feature, you just need to copy and paste the content of this file at your .vimrc file! Enjoy!
+python << EOF
+import vim
+import re
+
+ipdb_breakpoint = 'import ipdb; ipdb.set_trace()'
+
+def set_breakpoint():
+    breakpoint_line = int(vim.eval('line(".")')) - 1
+
+    current_line = vim.current.line
+    white_spaces = re.search('^(\s*)', current_line).group(1)
+
+    vim.current.buffer.append(white_spaces + ipdb_breakpoint, breakpoint_line)
+
+vim.command('map <f6> :py set_breakpoint()<cr>')
+
+def remove_breakpoints():
+    op = 'g/^.*%s.*/d' % ipdb_breakpoint
+    vim.command(op)
+
+vim.command('map <f8> :py remove_breakpoints()<cr>')
