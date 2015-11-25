@@ -115,26 +115,27 @@ export GPGKEY=3745866A
 alias ga='git add'
 alias gb='git branch'
 alias gca='git commit --amend'
+alias gcaa='git commit --amend -a'
 alias gc='git commit'
-alias gr='git remote'
 alias gd='git diff'
 alias gf='git fetch'
 alias gg='git grep'
-alias go='git checkout'
-alias gs='git status'
+alias gh='git log --color --decorate'
+alias gho='git log --color --decorate --oneline'
 alias gl='git pull'
 alias glom='git pull origin master'
 alias glum='git pull upstream master'
+alias go='git checkout'
 alias gp='git push'
 alias gpo='git push origin'
 alias gpom='git push origin master'
-alias glo='git log --color --decorate'
-alias gh='git log --color --decorate --oneline'
+alias gr='git remote'
+alias gs='git status'
 
 # Navigation aliases
 alias b='cd ..'
-alias j='cd -'
 alias h='cd'
+alias j='cd -'
 
 # History appendend locally after logout
 setopt APPEND_HISTORY
