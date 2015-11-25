@@ -2,7 +2,7 @@
 	name = Krzysztof Nowak
 	email = k.nowak@cern.ch
 [core]
-	excludesfile = /home/knowak/.gitignore_global
+	excludesfile = ~/.gitignore_global
 	pager = less -r
 [color]
 	branch = auto
