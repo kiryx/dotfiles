@@ -55,7 +55,7 @@ source $ZSH/oh-my-zsh.sh
 
 # bind k and j for VI mode
 bindkey -M vicmd 'k' history-substring-search-up
-bindkey -M vicmd 'l' history-substring-search-down
+bindkey -M vicmd 'j' history-substring-search-down
 # bind UP and DOWN arrow keys
 zmodload zsh/terminfo
 bindkey "$terminfo[kcuu1]" history-substring-search-up
@@ -123,6 +123,7 @@ alias gg='git grep'
 alias gh='git log --color --decorate'
 alias gho='git log --color --decorate --oneline'
 alias gl='git pull'
+alias glo='git pull origin'
 alias glom='git pull origin master'
 alias glum='git pull upstream master'
 alias go='git checkout'
