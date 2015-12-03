@@ -73,12 +73,6 @@ source $ZSH/oh-my-zsh.sh
 
 alias l='ls -AlhF'
 alias swapkeys='setxkbmap -option caps:swapescape'
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games"
-export PATH=$PATH:$HOME/.local/bin
-export C_INCLUDE_PATH=$HOME/.local/include
-export CPLUS_INCLUDE_PATH=$HOME/.local/include
-export LD_LIBRARY_PATH=$HOME/.local/lib
-# export PYTHONPATH=$HOME/.local/lib/python2.7/site-packages:$PYTHONPATH
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -105,10 +99,8 @@ export LD_LIBRARY_PATH=$HOME/.local/lib
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 source /usr/local/bin/virtualenvwrapper.sh
-export WORKON_HOME=~/virtualenvs
 fpath=(~/.zsh/completion $fpath)
 autoload -Uz compinit && compinit -i
-export GPGKEY=3745866A
 
 
 # Git aliases
