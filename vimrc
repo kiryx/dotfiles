@@ -24,6 +24,7 @@ set hlsearch " Highlight previous matches of previous search pattern
 set incsearch " Jump to the next search pattern match during typing
 set noswapfile " Contain all buffers in memory
 set nobackup " Don't keep a backup file before overwriting
+set clipboard=unnamedplus " Use system clipboard for copy/paste/delete
 
 "" Execute 'make' command in current directory
 map <leader>v <Esc>:w<CR>:!make<CR><CR>
