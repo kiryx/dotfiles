@@ -44,7 +44,7 @@ bindsym $mod+Shift+Q kill
 bindsym $mod+d exec dmenu_run
 
 # make window a floating one
-bindsym $mod+b floating enable; border normal
+bindsym $mod+b floating toggle; border normal
 
 # change focus (VIM)
 bindsym $mod+h focus left
