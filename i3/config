@@ -25,6 +25,11 @@ set $mod Mod4
 #font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 font pango:DejaVu Sans Mono 8
 
+# Make the currently focused window a scratchpad
+bindsym $mod+Shift+plus move scratchpad
+
+# Show the first scratchpad window
+bindsym $mod+plus scratchpad show
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
