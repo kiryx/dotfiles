@@ -31,6 +31,21 @@ bindsym $mod+Shift+plus move scratchpad
 # Show the first scratchpad window
 bindsym $mod+plus scratchpad show
 
+bindsym mod4+u [class="Thunderbird"] scratchpad show
+bindsym mod4+i [class="Spotify"] scratchpad show
+bindsym mod4+o [title="Gitter"] scratchpad show
+bindsym mod4+p [class="Xchat"] scratchpad show
+
+for_window [class="Thunderbird"] move to scratchpad
+for_window [class="Spotify"] move to scratchpad
+for_window [class="Gitter"] move to scratchpad
+for_window [class="Xchat"] move to scratchpad
+
+exec thunderbird
+exec spotify
+exec xchat
+exec gitter
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
