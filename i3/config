@@ -9,13 +9,11 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 #
-# startup 
+# startup
 #
 # power manager
-exec xfce4-power-manager &
+exec xrandr --dpi 200
 exec setxkbmap -option caps:swapescape
-exec xset b off
-exec --no-startup-id nm-applet
 
 exec dunst &
 
@@ -23,7 +21,7 @@ set $mod Mod4
 
 # font for window titles. ISO 10646 = Unicode
 #font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-font pango:DejaVu Sans Mono 8
+font pango:Droid Sans Mono 8
 
 # Make the currently focused window a scratchpad
 bindsym $mod+Shift+plus move scratchpad
@@ -31,20 +29,22 @@ bindsym $mod+Shift+plus move scratchpad
 # Show the first scratchpad window
 bindsym $mod+plus scratchpad show
 
-bindsym mod4+u [class="Thunderbird"] scratchpad show
-bindsym mod4+i [class="Spotify"] scratchpad show
-bindsym mod4+o [title="Gitter"] scratchpad show
-bindsym mod4+p [class="Xchat"] scratchpad show
-
-for_window [class="Thunderbird"] move to scratchpad
-for_window [class="Spotify"] move to scratchpad
-for_window [class="Gitter"] move to scratchpad
-for_window [class="Xchat"] move to scratchpad
-
+# Autorun programs
 exec thunderbird
-exec spotify
-exec xchat
-exec gitter
+bindsym mod4+u [class="Thunderbird"] scratchpad show
+for_window [class="Thunderbird"] move to scratchpad
+
+exec "spotify --force-device-scale-factor=2"
+bindsym mod4+i [class="Spotify"] scratchpad show
+for_window [class="Spotify"] move to scratchpad
+
+# bindsym mod4+o [title="Gitter"] scratchpad show
+# for_window [class="Gitter"] move to scratchpad
+# exec gitter
+
+# exec xchat
+# bindsym mod4+p [class="Xchat"] scratchpad show
+# for_window [class="Xchat"] move to scratchpad
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -52,27 +52,20 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 
+# start chromium
+bindsym $mod+y exec chromium
+
 # kill focused window
 bindsym $mod+Shift+Q kill
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run
 
-# make window a floating one
-bindsym $mod+b floating toggle; border normal
-
 # change focus (VIM)
 bindsym $mod+h focus left
 bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
-
-# alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
-
 
 # backlight and sound
 bindsym XF86AudioLowerVolume exec "amixer set Master 5- -c 0 unmute"
@@ -86,7 +79,6 @@ bindsym XF86MonBrightnessDown exec "xbacklight =1 -time 10 -steps 1"
 bindsym F7 exec "sh ~/.i3/screens.sh"
 
 #move workspace to other output
-
 bindsym $mod+x move workspace to output right
 
 # move focused window (VIM)
@@ -95,12 +87,6 @@ bindsym $mod+Shift+J move down
 bindsym $mod+Shift+K move up
 bindsym $mod+Shift+L move right
 #
-# alternatively, you can use the cursor keys:
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
-
 # split in horizontal orientation
 bindsym $mod+backslash split h
 
@@ -116,7 +102,7 @@ bindsym $mod+w layout tabbed
 bindsym $mod+e layout default
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+bindsym $mod+Shift+space floating toggle; border normal
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
@@ -164,40 +150,27 @@ bindsym $mod+Shift+E exit
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
+    # These bindings trigger as soon as you enter the resize mode
 
-        # They resize the border in the direction you pressed, e.g.
-        # when pressing left, the window is resized so that it has
-        # more space on its left
+    # They resize the border in the direction you pressed, e.g.
+    # when pressing left, the window is resized so that it has
+    # more space on its left
 
-bindsym h resize grow left 3 px or 3 ppt
-bindsym Shift+H resize shrink   right 3 px or 3 ppt
+    bindsym h resize grow left 3 px or 3 ppt
+    bindsym Shift+H resize shrink   right 3 px or 3 ppt
 
-bindsym j resize grow down 3 px or 3 ppt
-bindsym Shift+J resize shrink   up 3 px or 3 ppt
+    bindsym j resize grow down 3 px or 3 ppt
+    bindsym Shift+J resize shrink   up 3 px or 3 ppt
 
-bindsym k resize grow up 3 px or 3 ppt
-bindsym Shift+K resize shrink   down 3 px or 3 ppt
+    bindsym k resize grow up 3 px or 3 ppt
+    bindsym Shift+K resize shrink   down 3 px or 3 ppt
 
-bindsym l resize grow right 3 px or 3 ppt
-bindsym Shift+L resize shrink   left 3 px or 3 ppt
+    bindsym l resize grow right 3 px or 3 ppt
+    bindsym Shift+L resize shrink   left 3 px or 3 ppt
 
-        # same bindings, but for the arrow keys
-bindsym Left resize shrink left 5 px or 5 ppt
-bindsym Shift+Left resize grow   left 5 px or 5 ppt
-
-bindsym Down resize shrink down 5 px or 5 ppt
-bindsym Shift+Down resize grow   down 5 px or 5 ppt
-
-bindsym Up resize shrink up 5 px or 5 ppt
-bindsym Shift+Up resize grow   up 5 px or 5 ppt
-
-bindsym Right resize shrink right 5 px or 5 ppt
-bindsym Shift+Right resize grow   right 5 px or 5 ppt
-
-        # back to normal: Enter or Escape
-bindsym Return mode "default"
-bindsym Escape mode "default"
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
 }
 
 bindsym $mod+r mode "resize"

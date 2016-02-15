@@ -76,7 +76,7 @@ nmap <A-p> :lprev<CR>
 
 nnoremap <Space> za
 
-set guifont=Monospace\ 9
+set guifont=Droid\ Sans\ Mono\ 9
 
 "" Navigate the splits with C-{hjkl}
 nnoremap <C-j> <C-w>+

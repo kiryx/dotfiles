@@ -142,5 +142,5 @@ export C_INCLUDE_PATH=$HOME/.local/include
 export CPLUS_INCLUDE_PATH=$HOME/.local/include
 export LD_LIBRARY_PATH=$HOME/.local/lib
 # export PYTHONPATH=$HOME/.local/lib/python2.7/site-packages:$PYTHONPATH
-export WORKON_HOME=~/virtualenvs
+export WORKON_HOME=~/env
 export GPGKEY=3745866A
