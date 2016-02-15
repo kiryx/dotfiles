@@ -49,7 +49,7 @@ ZSH_THEME="bureau"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git z vi-mode history-substring-search)
+plugins=(git z vi-mode history-substring-search zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -128,12 +128,27 @@ alias gpom='git push origin master'
 alias gr='git remote'
 alias gs='git status'
 
+# Docker aliases
+alias dc='docker-compose'
+alias dcu='docker-compose up'
+alias dm='docker-machine'
+alias dms='docker-machine start'
+alias dme='eval "$(docker-machine env default)"'
+alias d='docker'
+
+# Virtualenv aliases
+alias wo='workon'
+alias de='deactivate'
+alias mkv='mkvirtualenv'
+alias rmv='rmvirtualenv'
+
 # Navigation aliases
 alias b='cd ..'
 alias h='cd'
 alias j='cd -'
 
 # History appendend locally after logout
+setopt no_share_history
 setopt APPEND_HISTORY
 
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games"
