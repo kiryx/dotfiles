@@ -1,0 +1,8 @@
+map h previousTab
+map l nextTab
+unmap d
+map d removeTab
+unmap u
+map u restoreTab
+map <c-d> scrollPageDown
+map <c-u> scrollPageUp

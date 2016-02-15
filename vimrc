@@ -88,6 +88,9 @@ nnoremap <C-h> <C-w><
 set splitbelow
 set splitright
 
+"" Enables vim-airline tabline
+let g:airline#extensions#tabline#enabled = 1
+
 "" Relative line counting instead of absolute
 nnoremap <leader>z :NumbersToggle<CR>
 
