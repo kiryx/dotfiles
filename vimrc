@@ -87,23 +87,29 @@ set guifont=Droid\ Sans\ Mono\ 9
 set guioptions=
 
 "" Resize the splits with C-{hjkl}
-nnoremap <S-U> <C-w>+
-nnoremap <S-I> <C-w>-
-nnoremap <S-O> <C-w>>
-nnoremap <S-Y> <C-w><
+"nnoremap <S-U> <C-w>+
+"nnoremap <S-I> <C-w>-
+"nnoremap <S-O> <C-w>>
+"nnoremap <S-Y> <C-w><
 
 "" Navigate the splits with C-{hjkl}
-nnoremap <S-J> <C-w>j
-nnoremap <S-K> <C-w>k
-nnoremap <S-L> <C-w>l
-nnoremap <S-H> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+nnoremap <C-h> <C-w>h
 
 "" Splits the windows below and right to the current one
 set splitbelow
 set splitright
 
 "" Enables vim-airline tabline
-let g:airline#extensions#tabline#enabled = 1
+" let g:airline#extensions#tabline#enabled = 1
+set showtabline=0
+
+"" Enable the silversearcher glob
+if executable("ag")
+    let g:CtrlSpaceGlobCommand = 'ag -l --nocolor -g ""'
+endif
 
 "" Relative line counting instead of absolute
 nnoremap <leader>z :NumbersToggle<CR>
