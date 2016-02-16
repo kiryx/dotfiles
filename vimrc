@@ -1,4 +1,5 @@
 execute pathogen#infect()
+Helptags
 let mapleader = ","
 set nocompatible " Turn the vi compatibility off
 set bs=2 " Enable backspace in insert mode
@@ -86,11 +87,11 @@ nnoremap <Space> za
 set guifont=Droid\ Sans\ Mono\ 9
 set guioptions=
 
-"" Resize the splits with C-{hjkl}
-"nnoremap <S-U> <C-w>+
-"nnoremap <S-I> <C-w>-
-"nnoremap <S-O> <C-w>>
-"nnoremap <S-Y> <C-w><
+"" Resize the splits with A-{hjkl}
+nnoremap <A-j> <C-w>+
+nnoremap <A-k> <C-w>-
+nnoremap <A-l> <C-w>>
+nnoremap <A-h> <C-w><
 
 "" Navigate the splits with C-{hjkl}
 nnoremap <C-j> <C-w>j
@@ -104,6 +105,9 @@ set splitright
 
 "" Enables vim-airline tabline
 " let g:airline#extensions#tabline#enabled = 1
+let g:airline_exclude_preview=1
+
+"" Turn off the tabline
 set showtabline=0
 
 "" Enable the silversearcher glob
@@ -111,13 +115,21 @@ if executable("ag")
     let g:CtrlSpaceGlobCommand = 'ag -l --nocolor -g ""'
 endif
 
+let g:CtrlSpaceUseTabline = 1
+
+"" Search filter delay
+let g:CtrlSpaceSearchTiming = 50
+
+"" Custom Symbols
+let g:CtrlSpaceSymbols = { "WLoad": "↥", "WSave": "↧" }
+
 "" Relative line counting instead of absolute
 nnoremap <leader>z :NumbersToggle<CR>
 
 filetype plugin indent on
 
 let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_python_checkers = ['pyflakes', 'pep8', 'pep257', 'isort **/*.py -c']
+let g:syntastic_python_checkers = ['pyflakes', 'pep8', 'pep257']
 "" pep8 will ignore: E501(line length)
 " let g:syntastic_python_pep8_args='--ignore=E501'
 "" pylint will ignore: F0401(imports), W0142(*magic)
@@ -153,9 +165,6 @@ fu! CustomFoldText()
     return line . expansionString . foldSizeStr . foldPercentage . foldLevelStr
 endf
 set foldtext=CustomFoldText()
-
-" Isort for Python (DOESNT WORK AT THE MOMENT)
-let g:vim_isort_map = ''
 
 " Author: Bernardo Fontes <falecomigo@bernardofontes.net>
 " Website: http://www.bernardofontes.net

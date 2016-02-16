@@ -12,7 +12,7 @@
 # startup
 #
 # power manager
-exec xrandr --dpi 200
+exec xrandr --dpi 220
 exec setxkbmap -option caps:swapescape
 
 exec dunst &
@@ -43,8 +43,8 @@ bindsym mod4+o [title="Gitter"] scratchpad show
 for_window [class="Gitter"] move to scratchpad
 
 # exec xchat
-# bindsym mod4+p [class="Xchat"] scratchpad show
-# for_window [class="Xchat"] move to scratchpad
+bindsym mod4+p [class="Xchat"] scratchpad show
+for_window [class="Xchat"] move to scratchpad
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
