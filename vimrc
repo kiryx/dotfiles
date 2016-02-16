@@ -50,6 +50,12 @@ set colorcolumn=80
 nmap <C-n> :bnext<CR>
 nmap <C-p> :bprev<CR>
 
+" Move tabs with alt-l/h
+map <a-l> gt
+map <a-h> gT
+" Create tabs with alt-j/k
+map <a-k> :tabnew<CR>
+map <a-j> :tabclose<CR>
 
 "" Toggles displaying special characters (tabs, eol, trailing spaces)
 nmap <leader>r :set list!<CR>
@@ -66,6 +72,7 @@ set expandtab tabstop=4 shiftwidth=4 softtabstop=4
 
 nmap <leader>w :w<CR>
 nmap <leader>e :e.<CR>
+nmap <leader>q :q<CR>
 
 "" Open current file in new tab
 "nnoremap <expr> <leader>a (exists('g:zoomedtabpagenr') && g:zoomedtabpagenr == tabpagenr()) ? ':tabclose\|unlet g:zoomedtabpagenr<CR>' : ':tabe %\|let g:zoomedtabpagenr=tabpagenr()<CR>'
@@ -77,12 +84,19 @@ nmap <A-p> :lprev<CR>
 nnoremap <Space> za
 
 set guifont=Droid\ Sans\ Mono\ 9
+set guioptions=
+
+"" Resize the splits with C-{hjkl}
+nnoremap <S-U> <C-w>+
+nnoremap <S-I> <C-w>-
+nnoremap <S-O> <C-w>>
+nnoremap <S-Y> <C-w><
 
 "" Navigate the splits with C-{hjkl}
-nnoremap <C-j> <C-w>+
-nnoremap <C-k> <C-w>-
-nnoremap <C-l> <C-w>>
-nnoremap <C-h> <C-w><
+nnoremap <S-J> <C-w>j
+nnoremap <S-K> <C-w>k
+nnoremap <S-L> <C-w>l
+nnoremap <S-H> <C-w>h
 
 "" Splits the windows below and right to the current one
 set splitbelow
