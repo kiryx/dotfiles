@@ -38,9 +38,9 @@ exec "spotify --force-device-scale-factor=2"
 bindsym mod4+i [class="Spotify"] scratchpad show
 for_window [class="Spotify"] move to scratchpad
 
-# bindsym mod4+o [title="Gitter"] scratchpad show
-# for_window [class="Gitter"] move to scratchpad
 # exec gitter
+bindsym mod4+o [title="Gitter"] scratchpad show
+for_window [class="Gitter"] move to scratchpad
 
 # exec xchat
 # bindsym mod4+p [class="Xchat"] scratchpad show
