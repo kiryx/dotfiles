@@ -149,6 +149,7 @@ alias j='cd -'
 
 # Tree alias
 alias t='tree'
+alias tl='tree -L'
 
 # History appendend locally after logout
 setopt no_share_history
