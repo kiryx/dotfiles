@@ -128,6 +128,7 @@ alias gs='git status'
 
 # Docker aliases
 alias d='docker'
+alias dstop='docker stop $(docker ps -aq)'
 alias dc='docker-compose'
 alias dcu='docker-compose up'
 alias dm='docker-machine'
