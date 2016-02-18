@@ -87,16 +87,21 @@ set guifont=Droid\ Sans\ Mono\ 9
 set guioptions=
 
 "" Resize the splits with C-{hjkl}
-"nnoremap <S-U> <C-w>+
-"nnoremap <S-I> <C-w>-
-"nnoremap <S-O> <C-w>>
-"nnoremap <S-Y> <C-w><
+"nnoremap <S-J> <C-w>+
+"nnoremap <S-K> <C-w>-
+"nnoremap <S-L> <C-w>>
+"nnoremap <S-H> <C-w><
 
 "" Navigate the splits with C-{hjkl}
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 nnoremap <C-h> <C-w>h
+
+nmap <C-w>j <C-w>+
+nmap <C-w>k <C-w>-
+nmap <C-w>l <C-w>>
+nmap <C-w>h <C-w><
 
 "" Splits the windows below and right to the current one
 set splitbelow

@@ -69,8 +69,6 @@ export KEYTIMEOUT=10
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
-source $ZSH/oh-my-zsh.sh
-
 alias l='ls -AlhF'
 alias swapkeys='setxkbmap -option caps:swapescape'
 
@@ -129,18 +127,19 @@ alias gr='git remote'
 alias gs='git status'
 
 # Docker aliases
+alias d='docker'
 alias dc='docker-compose'
 alias dcu='docker-compose up'
 alias dm='docker-machine'
-alias dms='docker-machine start'
+alias dms='docker-machine start default'
 alias dme='eval "$(docker-machine env default)"'
-alias d='docker'
 
 # Virtualenv aliases
 alias wo='workon'
 alias de='deactivate'
 alias mkv='mkvirtualenv'
 alias rmv='rmvirtualenv'
+export WORKON_HOME=~/env
 
 # Navigation aliases
 alias b='cd ..'
@@ -155,11 +154,13 @@ alias tl='tree -L'
 setopt no_share_history
 setopt APPEND_HISTORY
 
+# Paths
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games"
 export PATH=$PATH:$HOME/.local/bin
 export C_INCLUDE_PATH=$HOME/.local/include
 export CPLUS_INCLUDE_PATH=$HOME/.local/include
 export LD_LIBRARY_PATH=$HOME/.local/lib
 # export PYTHONPATH=$HOME/.local/lib/python2.7/site-packages:$PYTHONPATH
-export WORKON_HOME=~/env
+
+# GPG key
 export GPGKEY=3745866A
