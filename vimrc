@@ -41,7 +41,7 @@ map <S-CR> O<Esc>j
 
 map <C-i> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
-let NERDTreeIgnore = ['\.pyc$', '\.un\~$']
+let NERDTreeIgnore = ['\.pyc$', '\.un\~$', '__pycache__$']
 set colorcolumn=80
 
 "" Navigation 'j' and 'k' will not jump over the line breaks
