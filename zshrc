@@ -132,8 +132,9 @@ alias dstop='docker stop $(docker ps -aq)'
 alias dc='docker-compose'
 alias dcu='docker-compose up'
 alias dm='docker-machine'
-alias dms='docker-machine start default'
-alias dme='eval "$(docker-machine env default)"'
+alias dms='docker-machine start'
+alias dmsd='docker-machine start default'
+alias dmed='eval "$(docker-machine env default)"'
 
 # Virtualenv aliases
 alias wo='workon'
