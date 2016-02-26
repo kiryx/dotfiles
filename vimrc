@@ -191,10 +191,10 @@ def set_breakpoint():
 
     vim.current.buffer.append(white_spaces + ipdb_breakpoint, breakpoint_line)
 
-vim.command('map <f6> :py set_breakpoint()<cr>')
+vim.command('map <leader>i :py set_breakpoint()<cr>')
 
 def remove_breakpoints():
     op = 'g/^.*%s.*/d' % ipdb_breakpoint
     vim.command(op)
 
-vim.command('map <f8> :py remove_breakpoints()<cr>')
+vim.command('map <leader>I :py remove_breakpoints()<cr>')

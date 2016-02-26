@@ -16,6 +16,7 @@ exec xrandr --dpi 192
 exec setxkbmap -option caps:swapescape
 
 exec "dunst -config $HOME/.dunstrc &"
+exec "nm-applet"
 
 set $mod Mod4
 
