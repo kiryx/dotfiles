@@ -141,6 +141,7 @@ alias wo='workon'
 alias de='deactivate'
 alias mkv='mkvirtualenv'
 alias rmv='rmvirtualenv'
+alias lsv='lsvirtualenv'
 export WORKON_HOME=~/env
 
 # Navigation aliases
