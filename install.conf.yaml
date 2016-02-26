@@ -10,8 +10,10 @@
     ~/.vimperatorrc: vimperatorrc
     ~/.gitconfig: gitconfig
     ~/.inputrc: inputrc
+    ~/.dunstrc: dunstrc
     ~/.gitignore_global: gitignore_global
     ~/.i3: i3/
+    ~/.config/termite/config: termiterc
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]

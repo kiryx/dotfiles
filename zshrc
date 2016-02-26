@@ -96,7 +96,7 @@ alias swapkeys='setxkbmap -option caps:swapescape'
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-source /usr/local/bin/virtualenvwrapper.sh
+source /usr/bin/virtualenvwrapper.sh
 fpath=(~/.zsh/completion $fpath)
 autoload -Uz compinit && compinit -i
 

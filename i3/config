@@ -12,10 +12,10 @@
 # startup
 #
 # power manager
-exec xrandr --dpi 220
+exec xrandr --dpi 192
 exec setxkbmap -option caps:swapescape
 
-exec dunst &
+exec "dunst -config $HOME/.dunstrc &"
 
 set $mod Mod4
 
@@ -30,7 +30,7 @@ bindsym $mod+Shift+plus move scratchpad
 bindsym $mod+plus scratchpad show
 
 # Autorun programs
-exec thunderbird
+# exec thunderbird
 bindsym mod4+u [class="Thunderbird"] scratchpad show
 for_window [class="Thunderbird"] move to scratchpad
 
