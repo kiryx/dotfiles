@@ -144,6 +144,9 @@ alias rmv='rmvirtualenv'
 alias lsv='lsvirtualenv'
 export WORKON_HOME=~/env
 
+# Isort alias
+alias is='isort -rc **/*.py'
+
 # Navigation aliases
 alias b='cd ..'
 alias h='cd'
