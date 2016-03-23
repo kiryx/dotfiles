@@ -156,6 +156,12 @@ alias j='cd -'
 alias t='tree'
 alias tl='tree -L'
 
+# Browser alias
+alias o='chromium'
+
+# Edit alias
+alias e='vim'
+
 # History appendend locally after logout
 setopt no_share_history
 setopt APPEND_HISTORY
