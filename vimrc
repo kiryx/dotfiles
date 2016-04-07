@@ -27,8 +27,6 @@ set noswapfile " Contain all buffers in memory
 set nobackup " Don't keep a backup file before overwriting
 set clipboard=unnamedplus " Use system clipboard for copy/paste/delete
 
-"" Execute 'make' command in current directory
-map <leader>v <Esc>:w<CR>:!make<CR><CR>
 
 "" Changing buffers
 map <leader>f :buffers<CR>:buffer<Space>
@@ -109,6 +107,11 @@ nmap <C-w>h <C-w><
 set splitbelow
 set splitright
 
+"" Split window vertically
+map <leader>v <C-w>v
+"" Split window horizontally
+map <leader>s <C-w>s
+
 "" Enables vim-airline tabline
 " let g:airline#extensions#tabline#enabled = 1
 let g:airline_exclude_preview=1
@@ -142,8 +145,8 @@ let g:syntastic_python_checkers = ['pyflakes', 'pep8', 'pep257']
 "let g:syntastic_python_pylint_args='--disable=F0401,W0142'
 
 "" No spelling by default, but set up the English dictionary as default
-set nospell spelllang=en
-nmap <leader>s :set spell!<CR>
+"set nospell spelllang=en
+"nmap <leader>s :set spell!<CR>
 "" Spelling on by default for .tex files
 au BufReadPost *.tex setlocal spell spelllang=en
 

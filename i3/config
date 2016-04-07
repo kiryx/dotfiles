@@ -35,7 +35,7 @@ bindsym $mod+plus scratchpad show
 bindsym mod4+u [class="Thunderbird"] scratchpad show
 for_window [class="Thunderbird"] move to scratchpad
 
-exec "spotify --force-device-scale-factor=2"
+# exec "spotify --force-device-scale-factor=2"
 bindsym mod4+i [class="Spotify"] scratchpad show
 for_window [class="Spotify"] move to scratchpad
 
