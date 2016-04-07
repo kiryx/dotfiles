@@ -132,6 +132,10 @@ let g:CtrlSpaceSearchTiming = 50
 "" Custom Symbols
 let g:CtrlSpaceSymbols = { "WLoad": "↥", "WSave": "↧" }
 
+let g:CtrlSpaceDefaultMapping = 0
+"" Custom ctrl-space mapping
+let g:CtrlSpaceDefaultMappingKey = "<S-Space>"
+
 "" Relative line counting instead of absolute
 nnoremap <leader>z :NumbersToggle<CR>
 
