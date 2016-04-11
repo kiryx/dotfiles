@@ -13,9 +13,10 @@ set hidden " Enables navigation between buffers without saving
 syntax on " Set syntax highlighting on
 
 colorscheme solarized
-"colorscheme monokai
 set background=dark
-call togglebg#map("<F5>") " Alternate between light/dark solarized background
+
+" Alternate between light/dark solarized background
+map <leader>T :ToggleBG<CR>
 
 set autoindent " Copy indent from current line when making a new line
 set showmatch " Blink the matching brackets when typing
@@ -142,7 +143,7 @@ nnoremap <leader>z :NumbersToggle<CR>
 filetype plugin indent on
 
 let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_python_checkers = ['pyflakes', 'pep8', 'pep257']
+let g:syntastic_python_checkers = ['pyflakes', 'pep8', 'pydocstyle']
 "" pep8 will ignore: E501(line length)
 " let g:syntastic_python_pep8_args='--ignore=E501'
 "" pylint will ignore: F0401(imports), W0142(*magic)
