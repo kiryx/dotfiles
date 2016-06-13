@@ -51,7 +51,7 @@ for_window [class="Xchat"] move to scratchpad
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec termite
 
 # start chromium
 bindsym $mod+y exec chromium

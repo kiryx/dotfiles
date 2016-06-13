@@ -63,7 +63,7 @@ bindkey "$terminfo[kcud1]" history-substring-search-down
 bindkey "$terminfo[cuu1]" history-substring-search-up
 bindkey "$terminfo[cud1]" history-substring-search-down
 
-export KEYTIMEOUT=10
+export KEYTIMEOUT=1
 
 # User configuration
 
@@ -111,7 +111,7 @@ alias gd='git diff'
 alias gf='git fetch'
 alias gfu='git fetch upstream'
 alias gfum='git fetch upstream master'
-alias gg='git grep'
+alias gg='git grep -n'
 alias gh='git log --color --decorate'
 alias gho='git log --color --decorate --oneline'
 alias gl='git pull'
@@ -125,6 +125,8 @@ alias gpo='git push origin'
 alias gpom='git push origin master'
 alias gr='git remote'
 alias gs='git status'
+alias ge='git rebase'
+alias gem='git rebase master'
 
 # Docker aliases
 alias d='docker'
@@ -144,12 +146,17 @@ alias rmv='rmvirtualenv'
 alias lsv='lsvirtualenv'
 export WORKON_HOME=~/env
 
+# Grep colors and line numbers by default
+alias grep='grep -n --color'
+
 # Isort alias
 alias is='isort -rc **/*.py'
 
 # Navigation aliases
 alias b='cd ..'
+# Navigate to home
 alias h='cd'
+# Jump between last two directories
 alias j='cd -'
 
 # Tree alias
@@ -160,7 +167,7 @@ alias tl='tree -L'
 alias o='chromium'
 
 # Edit alias
-alias e='vim'
+alias e='gvim'
 
 # History appendend locally after logout
 setopt no_share_history
@@ -176,3 +183,13 @@ export LD_LIBRARY_PATH=$HOME/.local/lib
 
 # GPG key
 export GPGKEY=3745866A
+
+function zle-line-init zle-keymap-select {
+    VIM_NORMAL_PROMPT="%{$fg_bold[yellow]%}>>%{$reset_color%}"
+    VIM_INS_PROMPT="> "
+    PROMPT="${${KEYMAP/vicmd/$VIM_NORMAL_PROMPT}/(main|viins)/$VIM_INS_PROMPT}$_LIBERTY "
+    zle reset-prompt
+}
+
+zle -N zle-line-init
+zle -N zle-keymap-select
