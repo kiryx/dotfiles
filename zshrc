@@ -187,7 +187,7 @@ export GPGKEY=3745866A
 function zle-line-init zle-keymap-select {
     VIM_NORMAL_PROMPT="%{$fg_bold[yellow]%}>>%{$reset_color%}"
     VIM_INS_PROMPT="> "
-    PROMPT="${${KEYMAP/vicmd/$VIM_NORMAL_PROMPT}/(main|viins)/$VIM_INS_PROMPT}$_LIBERTY "
+    PS1="`basename \"$VIRTUAL_ENV\"`${${KEYMAP/vicmd/$VIM_NORMAL_PROMPT}/(main|viins)/$VIM_INS_PROMPT}$_LIBERTY "
     zle reset-prompt
 }
 

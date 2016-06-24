@@ -139,6 +139,7 @@ let g:CtrlSpaceDefaultMappingKey = "<S-Space>"
 
 "" Relative line counting instead of absolute
 nnoremap <leader>z :NumbersToggle<CR>
+autocmd BufRead,BufNewFile * call NumbersToggle()
 
 filetype plugin indent on
 
