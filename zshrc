@@ -126,7 +126,6 @@ alias gpom='git push origin master'
 alias gr='git remote'
 alias gs='git status'
 alias ge='git rebase'
-alias gem='git rebase master'
 
 # Docker aliases
 alias d='docker'

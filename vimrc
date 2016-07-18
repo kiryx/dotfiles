@@ -16,7 +16,8 @@ colorscheme solarized
 set background=dark
 
 " Alternate between light/dark solarized background
-map <leader>T :ToggleBG<CR>
+map <leader>d :set background=dark<CR>
+map <leader>l :set background=light<CR>
 
 set autoindent " Copy indent from current line when making a new line
 set showmatch " Blink the matching brackets when typing
