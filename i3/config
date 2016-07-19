@@ -12,7 +12,7 @@
 # startup
 #
 # power manager
-exec xrandr --dpi 192
+exec xrandr --dpi 96
 exec setxkbmap -option caps:swapescape
 
 exec "dunst -config $HOME/.dunstrc &"
