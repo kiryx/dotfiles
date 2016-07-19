@@ -37,3 +37,4 @@ sudo modprobe vboxdrv
 sudo modprobe vboxnetadp
 sudo modprobe vboxnetflt
 sudo modprobe vboxpci
+sudo pacman -S ttf-dejavu ttf-droid ttf-freefont ttf-liberation
