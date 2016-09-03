@@ -114,6 +114,7 @@ alias gfum='git fetch upstream master'
 alias gg='git grep -n'
 alias gh='git log --color --decorate'
 alias gho='git log --color --decorate --oneline'
+alias ght='git --no-pager log -20 --oneline --all --graph --decorate'
 alias gl='git pull'
 alias glo='git pull origin'
 alias glom='git pull origin master'
@@ -145,6 +146,11 @@ alias rmv='rmvirtualenv'
 alias lsv='lsvirtualenv'
 export WORKON_HOME=~/env
 
+# Lastpass copy password to clipboard
+p () {
+    lpass show -p "$1" | xclip -sel clip
+}
+
 # Grep colors and line numbers by default
 alias grep='grep -n --color'
 
@@ -162,11 +168,16 @@ alias j='cd -'
 alias t='tree'
 alias tl='tree -L'
 
+# Tea alias
+alias tea='sleep 180; notify-send "Tea\nTea\nTea"'
+
 # Browser alias
 alias o='chromium'
 
 # Edit alias
 alias e='gvim'
+
+alias beep='aplay -q ~/beep.wav'
 
 # History appendend locally after logout
 setopt no_share_history
@@ -192,3 +203,4 @@ function zle-line-init zle-keymap-select {
 
 zle -N zle-line-init
 zle -N zle-keymap-select
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

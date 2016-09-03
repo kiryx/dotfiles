@@ -15,6 +15,7 @@
     ~/.i3: i3/
     ~/.config/termite/config: termiterc
     ~/.local/bin: bin/
+    ~/.ghci: ghci
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]

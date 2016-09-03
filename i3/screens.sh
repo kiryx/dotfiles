@@ -1,9 +1,9 @@
 #!/bin/sh
 
 # Laptop screen as first
-FIRST="LVDS1"
+FIRST="eDP1"
 # External Screen on VGA port
-SECOND="VGA1"
+SECOND="DP1"
 
 xrandr --output $SECOND --off --output $FIRST --auto
 
