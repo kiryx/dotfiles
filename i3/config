@@ -12,11 +12,10 @@
 # startup
 #
 # power manager
-exec xrandr --dpi 192
+exec xrandr --dpi 96
 exec setxkbmap -option caps:swapescape
 
 exec "dunst -config $HOME/.dunstrc &"
-exec "nm-applet"
 
 set $mod Mod4
 
@@ -148,6 +147,8 @@ bindsym $mod+Shift+C reload
 bindsym $mod+Shift+R restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+E exit
+# lock i3 (logs you out of your X session)
+bindsym $mod+Shift+F exec "i3lock -t -i ~/.i3/i3lock_pattern.png"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {

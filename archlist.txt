@@ -1,11 +1,12 @@
 sudo pacman -S i3-wm
 sudo pacman -S i3bar
 sudo pacman -S i3status
+sudo pacman -S i3lock
 sudo pacman -S dunst
 sudo pacman -S termite
 sudo pacman -S git
-git clone git@github.com:krzysztof/invenio-devtools
 sudo pacman -S zsh
+sudo pacman -S zsh-syntax-highlighting
 
 sudo pacman -S gvim
 sudo pacman -S python
@@ -13,11 +14,13 @@ sudo pacman -S ttf-droid
 sudo pacman -S xrandr
 sudo pacman -S xorg-xrandr arandr
 sudo pacman -S dmenu
+sudo pacman -S tree
 sudo pacman -S chromium
 sudo pacman -S python-pip
 sudo pacman -S virtualbox
 sudo pacman -S openssh
 sudo pacman -S xclip
+sudo pacman -S xchat
 pacman -S thunderbird
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
@@ -30,10 +33,5 @@ sudo pacman -S xclip
 xclip -sel clip < ~/.ssh/id_rsa.pub
 
 sudo pacman -S docker
-sudo pacman -S docker-machine
 sudo pacman -S docker-compose
-docker-machine create --driver virtualbox default
-sudo modprobe vboxdrv
-sudo modprobe vboxnetadp
-sudo modprobe vboxnetflt
-sudo modprobe vboxpci
+sudo pacman -S ttf-dejavu ttf-droid ttf-freefont ttf-liberation
