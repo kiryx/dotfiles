@@ -177,7 +177,7 @@ alias o='chromium'
 # Edit alias
 alias e='gvim'
 
-alias beep='aplay -q ~/beep.wav'
+alias beep='aplay -q ~/.i3/beep.wav'
 
 # History appendend locally after logout
 setopt no_share_history
