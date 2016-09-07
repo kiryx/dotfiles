@@ -151,6 +151,11 @@ p () {
     lpass show -p "$1" | xclip -sel clip
 }
 
+pipr () {
+    pip uninstall "$1" -y
+    pip install -e "file://${HOME}/src/${1}#egg=${1}"
+}
+
 # Grep colors and line numbers by default
 alias grep='grep -n --color'
 
