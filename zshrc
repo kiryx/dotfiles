@@ -159,6 +159,8 @@ pipr () {
 # Grep colors and line numbers by default
 alias grep='grep -n --color'
 
+alias ssh='TERM=xterm-color ssh'
+
 # Isort alias
 alias is='isort -rc **/*.py'
 
