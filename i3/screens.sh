@@ -7,9 +7,9 @@ SECOND="DP1"
 
 xrandr --output $SECOND --off --output $FIRST --auto
 
-i3-nagbar -m "DUAL SCREEN CONFIG UTILITY (run 'arandr' for config)" -t warning \
-	-b "LVDS + VGA" "xrandr --output $SECOND --auto  --left-of $FIRST --output $FIRST --auto  --primary" \
-	-b "LVDS ONLY" "xrandr --output $SECOND --off --output $FIRST --auto  --primary"
+i3-nagbar -m "SCREEN CONFIG UTILITY (run 'arandr' for config)" -t warning \
+	-b "$SECOND" "xrandr --output $SECOND --auto --output $FIRST --off; swapkeys" \
+	-b "Scale $FIRST" "xrandr --output $FIRST --scale 0.5x0.5"
 
 # Original Script by ebrnd ( http://ebrnd.de/?p=501 )
 ##!/bin/sh
