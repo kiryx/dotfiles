@@ -8,8 +8,9 @@ SECOND="DP1"
 xrandr --output $SECOND --off --output $FIRST --auto
 
 i3-nagbar -m "SCREEN CONFIG UTILITY (run 'arandr' for config)" -t warning \
-	-b "$SECOND" "xrandr --output $SECOND --auto --output $FIRST --off; swapkeys" \
-	-b "Scale $FIRST" "xrandr --output $FIRST --scale 0.5x0.5"
+	-b "$SECOND" "xrandr --output $SECOND --auto --dpi 96 --output $FIRST --off; swapkeys; setxkbmap pl -option caps:swapescape" \
+	-b "Scale $FIRST" "xrandr --output $FIRST --scale 0.5x0.5" \
+	-b "$FIRST" "xrandr --output $FIRST --dpi 192"
 
 # Original Script by ebrnd ( http://ebrnd.de/?p=501 )
 ##!/bin/sh
