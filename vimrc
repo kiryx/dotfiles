@@ -116,7 +116,7 @@ map <leader>s <C-w>s
 
 "" Enables vim-airline tabline
 " let g:airline#extensions#tabline#enabled = 1
-let g:airline_exclude_preview=1
+" let g:airline_exclude_preview=1
 
 "" Turn off the tabline
 set showtabline=0

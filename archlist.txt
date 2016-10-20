@@ -17,6 +17,7 @@ sudo pacman -S dmenu
 sudo pacman -S tree
 sudo pacman -S chromium
 sudo pacman -S python-pip
+sudo pacman -S flake8
 sudo pacman -S virtualbox
 sudo pacman -S openssh
 sudo pacman -S xclip
@@ -26,6 +27,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 
 sudo pip install virtualenv
 sudo pip install virtualenvwrapper
+sudo pip install pydocstyle
 
 sudo pacman -S openssh
 ssh-keygen -t rsa -b 4096 -C "kn@linux.com"

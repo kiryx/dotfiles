@@ -149,6 +149,7 @@ bindsym $mod+Shift+R restart
 bindsym $mod+Shift+E exit
 # lock i3 (logs you out of your X session)
 bindsym $mod+Shift+F exec "i3lock -f -t -i ~/.i3/i3lock_pattern.png"
+bindsym $mod+Shift+S exec "i3lock -f -t -i ~/.i3/i3lock_pattern.png && systemctl suspend"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
