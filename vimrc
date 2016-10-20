@@ -145,7 +145,7 @@ autocmd BufRead,BufNewFile * call NumbersToggle()
 filetype plugin indent on
 
 let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_python_checkers = ['pyflakes', 'pep8', 'pydocstyle']
+let g:syntastic_python_checkers = ['pyflakes', 'flake8', 'pydocstyle']
 "" pep8 will ignore: E501(line length)
 " let g:syntastic_python_pep8_args='--ignore=E501'
 "" pylint will ignore: F0401(imports), W0142(*magic)
