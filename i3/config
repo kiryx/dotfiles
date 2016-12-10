@@ -76,7 +76,7 @@ bindsym XF86MonBrightnessUp exec "xbacklight +5 -time 10 -steps 1"
 bindsym XF86MonBrightnessDown exec "xbacklight =1 -time 10 -steps 1"
 
 # dual screens menu
-bindsym F7 exec "sh ~/.i3/screens.sh"
+bindsym F8 exec "sh ~/.i3/screens.sh"
 
 #move workspace to other output
 bindsym $mod+x move workspace to output right
