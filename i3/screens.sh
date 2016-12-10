@@ -4,14 +4,14 @@
 FIRST="eDP1"
 # External Screen on DP port
 SECOND="DP1"
+BASEDPI=160
 
-xrandr --output $SECOND --off --output $FIRST --auto
+xrandr --output $SECOND --off --output $FIRST --auto --dpi $BASEDPI --scale 1x1
 
 i3-nagbar -m "SCREEN CONFIG UTILITY (run 'arandr' for config)" -t warning \
-    -b "DP1" "xrandr --output $SECOND --auto --dpi 96 --output $FIRST --off; swapkeys; setxkbmap pl -option caps:swapescape" \
-    -b "Scale XPS" "xrandr --output $FIRST --scale 0.5x0.5" \
-    -b "XPS @ Home"  "xrandr --output eDP1 --dpi 160 --scale 1x1 --auto --output DP1 --dpi 160 --scale 1x1 --auto --right-of eDP1" \
-    -b "$FIRST" "xrandr --output $FIRST --dpi 160 --scale 1x1"
+    -b "XPS+4k"  "xrandr --output $FIRST --dpi $BASEDPI --scale 1x1 --auto --output $SECOND --dpi $BASEDPI --scale 1x1 --auto --right-of $FIRST" \
+    -b "$FIRST" "xrandr --output $FIRST --dpi $BASEDPI --scale 1x1" \
+    -b "$SECOND" "xrandr --output $SECOND --auto --dpi 96 --output $FIRST --off" \
 
 # Original Script by ebrnd ( http://ebrnd.de/?p=501 )
 ##!/bin/sh
