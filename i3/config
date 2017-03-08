@@ -113,8 +113,10 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindcode $mod+d focus child
 bar {
-	status_command i3status --config ~/.i3/i3status.conf
-	#i3bar_command /usr/bin/i3bar
+    #status_command i3status --config ~/.i3/i3status.conf
+    status_command python ~/.i3/i3pystatus_config.py
+    position          bottom
+    workspace_buttons yes
 }
 
 # switch to workspace
