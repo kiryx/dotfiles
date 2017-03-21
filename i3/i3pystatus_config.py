@@ -22,7 +22,7 @@ status.register("temp",
 # ↓14.22W 56.15% [77.81%] 2h:41m
 # And like this if full:
 # =14.22W 100.0% [91.21%]
-#
+# 
 # This would also display a desktop notification (via D-Bus) if the percentage
 # goes below 5 percent while discharging. The block will also color RED.
 # If you don't have a desktop notification demon yet, take a look at dunst:
