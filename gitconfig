@@ -1,6 +1,7 @@
 [user]
 	name = Krzysztof Nowak
 	email = k.nowak@cern.ch
+	signingkey = 977512DFB68BE997
 [core]
 	excludesfile = ~/.gitignore_global
 	pager = less -r
@@ -32,3 +33,4 @@
 [push]
 	default = current
 [commit]
+	gpgsign = true
