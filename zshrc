@@ -194,6 +194,7 @@ setopt APPEND_HISTORY
 # Paths
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games"
 export PATH=$PATH:$HOME/.local/bin
+export PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 export C_INCLUDE_PATH=$HOME/.local/include
 export CPLUS_INCLUDE_PATH=$HOME/.local/include
 export LD_LIBRARY_PATH=$HOME/.local/lib
@@ -212,3 +213,6 @@ function zle-line-init zle-keymap-select {
 zle -N zle-line-init
 zle -N zle-keymap-select
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# added by travis gem
+[ -f /home/krnowak/.travis/travis.sh ] && source /home/krnowak/.travis/travis.sh
