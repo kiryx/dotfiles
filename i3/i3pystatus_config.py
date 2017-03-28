@@ -6,11 +6,12 @@ status = Status()
 # Tue 30 Jul 11:59:46 PM KW31
 #                          ^-- calendar week
 status.register("clock",
-    format="%a %-d %b %X KW%V",)
+    format="%a %-d %b %T",)
 
 # Shows the average load of the last minute and the last 5 minutes
 # (the default value for format is used)
-status.register("load")
+status.register("load", format='{avg1} {avg5} {tasks}')
+status.register("mem_bar")
 
 # Shows your CPU temperature, if you have a Intel CPU
 status.register("temp",
@@ -28,7 +29,7 @@ status.register("temp",
 # If you don't have a desktop notification demon yet, take a look at dunst:
 #   http://www.knopwob.org/dunst/
 status.register("battery",
-    format="{status}/{consumption:.2f}W {percentage:.2f}% [{percentage_design:.2f}%] {remaining:%E%hh:%Mm}",
+    format="{status}{consumption:.2f}W {percentage:.2f}% \[{percentage_design:.2f}%\] {remaining:%E%hh:%Mm}",
     alert=True,
     alert_percentage=5,
     status={
@@ -39,15 +40,15 @@ status.register("battery",
 
 # This would look like this:
 # Discharging 6h:51m
-status.register("battery",
-    format="{status} {remaining:%E%hh:%Mm}",
-    alert=True,
-    alert_percentage=5,
-    status={
-        "DIS":  "Discharging",
-        "CHR":  "Charging",
-        "FULL": "Bat full",
-    },)
+# status.register("battery",
+#     format="{status} {remaining:%E%hh:%Mm}",
+#     alert=True,
+#     alert_percentage=5,
+#     status={
+#         "DIS":  "Discharging",
+#         "CHR":  "Charging",
+#         "FULL": "Bat full",
+#     },)
 
 # Displays whether a DHCP client is running
 status.register("runwatch",
@@ -67,15 +68,19 @@ status.register("network",
 
 # Note: requires both netifaces and basiciw (for essid and quality)
 status.register("network",
-    interface="wlan0",
-    format_up="{essid} {quality:03.0f}%",)
+    interface="wlp58s0",
+    format_up="{essid} {quality:.0f}%",)
 
 # Shows disk usage of /
 # Format:
 # 42/128G [86G]
 status.register("disk",
     path="/",
-    format="{used}/{total}G [{avail}G]",)
+    format="'~/data': {used}/{total}G [{avail}G]",)
+
+status.register("disk",
+    path="/home/alice/data",
+    format="'/': {used}/{total}G [{avail}G]",)
 
 # Shows pulseaudio default sink volume
 #
@@ -86,12 +91,20 @@ status.register("pulseaudio",
 # Shows mpd status
 # Format:
 # Cloud connected▶Reroute to Remain
-status.register("mpd",
-    format="{title}{status}{album}",
-    status={
-        "pause": "▷",
-        "play": "▶",
-        "stop": "◾",
-    },)
+# status.register("mpd",
+#     format="{title}{status}{album}",
+#     status={
+#         "pause": "▷",
+#         "play": "▶",
+#         "stop": "◾",
+#     },)
+
+# status.register("backlight",
+#     format="{brightness}",
+# )
+
+# status.register("external_ip",
+#     format="{ip}",
+# )
 
 status.run()
