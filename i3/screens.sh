@@ -4,14 +4,15 @@
 FIRST="eDP1"
 # External Screen on DP port
 SECOND="DP1"
-BASEDPI=160
+DPI_XPS=192
+DPI_4K27=160
 
-xrandr --output $SECOND --off --output $FIRST --auto --dpi $BASEDPI --scale 1x1
+xrandr --output $SECOND --off --output $FIRST --auto --dpi $DPI_XPS --scale 1x1
 
 i3-nagbar -m "SCREEN CONFIG UTILITY (run 'arandr' for config)" -t warning \
-    -b "XPS+4k"  "xrandr --output $FIRST --dpi $BASEDPI --scale 1x1 --auto --output $SECOND --dpi $BASEDPI --scale 1x1 --auto --right-of $FIRST" \
-    -b "$FIRST" "xrandr --output $FIRST --dpi $BASEDPI --scale 1x1" \
-    -b "$SECOND" "xrandr --output $SECOND --auto --dpi 96 --output $FIRST --off" \
+    -b "XPS+4K"  "xrandr --output $FIRST --dpi $DPI_4K27 --scale 1x1 --auto --output $SECOND --dpi $DPI_4K27 --scale 1x1 --auto --right-of $FIRST" \
+    -b "Laptop" "xrandr --output $FIRST --dpi $DPI_XPS --scale 1x1" \
+    -b "LG 4K" "xrandr --output $SECOND --auto --dpi $DPI_4K27 --output $FIRST --off" \
 
 # Original Script by ebrnd ( http://ebrnd.de/?p=501 )
 ##!/bin/sh
