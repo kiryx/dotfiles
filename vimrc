@@ -85,7 +85,7 @@ nmap <A-p> :lprev<CR>
 
 nnoremap <Space> za
 
-set guifont=Droid\ Sans\ Mono\ 14
+set guifont=Droid\ Sans\ Mono\ 8
 set guioptions=
 
 "" Resize the splits with A-{hjkl}
