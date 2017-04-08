@@ -1,3 +1,8 @@
+##
+# Set the keyboard and locale:
+##
+# localectl set-x11-keymap pl pc105 , caps:swapescape
+
 sudo pacman -S i3-wm
 sudo pacman -S i3bar
 sudo pacman -S i3status
