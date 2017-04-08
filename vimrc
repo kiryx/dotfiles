@@ -85,8 +85,13 @@ nmap <A-p> :lprev<CR>
 
 nnoremap <Space> za
 
+let dotfilessetup = $DOTFILESSETUP
+if dotfilessetup == 'XPS13'
 set guifont=Droid\ Sans\ Mono\ 8
-set guioptions=
+else
+set guifont=Droid\ Sans\ Mono\ 10
+endif
+"set guioptions=
 
 "" Resize the splits with A-{hjkl}
 nnoremap <A-j> <C-w>+

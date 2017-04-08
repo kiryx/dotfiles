@@ -215,4 +215,5 @@ zle -N zle-keymap-select
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # added by travis gem
-[ -f /home/krnowak/.travis/travis.sh ] && source /home/krnowak/.travis/travis.sh
+[ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
+export DOTFILESSETUP=`cat $HOME/.DOTFILESSETUP`
