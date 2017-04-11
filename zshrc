@@ -216,4 +216,16 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 
 # added by travis gem
 [ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
-export DOTFILESSETUP=`cat $HOME/.DOTFILESSETUP`
+export DOTFILESCFG=`cat $HOME/.DOTFILESCFG`
+
+# Sets the DPI of the screen accoring to the config 
+xrandrdpi()
+{
+    if test $DOTFILESCFG = "XPS13"; then
+        xrandr --dpi 160
+
+    elif test $DOTFILESCFG = "CERN"; then
+        xrandr --dpi 96
+
+    fi
+}

@@ -12,7 +12,7 @@
 # startup
 #
 # power manager
-exec xrandr --dpi 160
+exec "xrandrdpi"  # Set the xrandr DPI option (see zshrc for definition)
 exec setxkbmap -option caps:swapescape
 
 exec "dunst -config $HOME/.dunstrc &"
@@ -52,7 +52,7 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec termite
 
-# start chromium
+# start chrome
 bindsym $mod+y exec google-chrome-stable
 
 # kill focused window

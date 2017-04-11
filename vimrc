@@ -85,11 +85,11 @@ nmap <A-p> :lprev<CR>
 
 nnoremap <Space> za
 
-let dotfilessetup = $DOTFILESSETUP
-if dotfilessetup == 'XPS13'
+let dotfilescfg = $DOTFILESCFG
+if dotfilescfg == 'XPS13'
 set guifont=Droid\ Sans\ Mono\ 8
 else
-set guifont=Droid\ Sans\ Mono\ 10
+set guifont=Droid\ Sans\ Mono\ 8
 endif
 "set guioptions=
 
