@@ -197,8 +197,9 @@ import vim
 import re
 
 ipdb_breakpoint = 'import ipdb; ipdb.set_trace()'
+wdb_breakpoint = 'import wdb; wdb.set_trace()'
 
-def set_breakpoint():
+def set_ipdb_breakpoint():
     breakpoint_line = int(vim.eval('line(".")')) - 1
 
     current_line = vim.current.line
@@ -206,10 +207,31 @@ def set_breakpoint():
 
     vim.current.buffer.append(white_spaces + ipdb_breakpoint, breakpoint_line)
 
-vim.command('map <leader>i :py set_breakpoint()<cr>')
+def set_wdb_breakpoint():
+    breakpoint_line = int(vim.eval('line(".")')) - 1
+
+    current_line = vim.current.line
+    white_spaces = re.search('^(\s*)', current_line).group(1)
+
+    vim.current.buffer.append(white_spaces + wdb_breakpoint, breakpoint_line)
+
+def set_wdb_trace():
+    breakpoint_line = int(vim.eval('line(".")')) - 1
+
+    current_line = vim.current.line
+    white_spaces = re.search('^(\s*)', current_line).group(1)
+
+    vim.current.buffer.append(white_spaces + "with wdb.trace():", breakpoint_line)
+    vim.current.buffer.append(white_spaces + "import wdb", breakpoint_line)
+
+vim.command('map <leader>i :py set_ipdb_breakpoint()<cr>')
+vim.command('map <leader>o :py set_wdb_breakpoint()<cr>')
+vim.command('map <leader>O :py set_wdb_trace()<cr>')
 
 def remove_breakpoints():
     op = 'g/^.*%s.*/d' % ipdb_breakpoint
+    vim.command(op)
+    op = 'g/^.*%s.*/d' % wdb_breakpoint
     vim.command(op)
 
 vim.command('map <leader>I :py remove_breakpoints()<cr>')
