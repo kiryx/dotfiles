@@ -139,13 +139,16 @@ let g:CtrlSpaceSearchTiming = 50
 "" Custom Symbols
 let g:CtrlSpaceSymbols = { "WLoad": "↥", "WSave": "↧" }
 
-let g:CtrlSpaceDefaultMapping = 0
+let g:CtrlSpaceDefaultMapping = 1
 "" Custom ctrl-space mapping
-let g:CtrlSpaceDefaultMappingKey = "<S-Space>"
+" let g:CtrlSpaceDefaultMappingKey = "<S-Space>"
 
 "" Relative line counting instead of absolute
 nnoremap <leader>z :NumbersToggle<CR>
 autocmd BufRead,BufNewFile * call NumbersToggle()
+
+" Auto-read file changes on external modification
+autocmd FocusGained,BufEnter * checktime
 
 filetype plugin indent on
 
@@ -160,7 +163,7 @@ let g:syntastic_python_checkers = ['pyflakes', 'flake8', 'pydocstyle']
 "set nospell spelllang=en
 "nmap <leader>s :set spell!<CR>
 "" Spelling on by default for .tex files
-au BufReadPost *.tex setlocal spell spelllang=en
+autocmd BufReadPost *.tex setlocal spell spelllang=en
 
 "" Custom folding
 set foldmethod=indent
