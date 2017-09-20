@@ -120,8 +120,8 @@ alias glo='git pull origin'
 alias glom='git pull origin master'
 alias glu='git pull upstream'
 alias glum='git pull upstream master'
-alias go='git checkout'
-alias got='git checkout --track'
+alias gco='git checkout'
+alias gcot='git checkout --track'
 alias gp='git push'
 alias gpo='git push origin'
 alias gpom='git push origin master'
@@ -229,3 +229,6 @@ xrandrdpi()
 
     fi
 }
+
+# added by travis gem
+[ -f /home/alice/.travis/travis.sh ] && source /home/alice/.travis/travis.sh

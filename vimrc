@@ -87,7 +87,7 @@ nnoremap <Space> za
 
 let dotfilescfg = $DOTFILESCFG
 if dotfilescfg == 'XPS13'
-set guifont=Droid\ Sans\ Mono\ 8
+set guifont=Droid\ Sans\ Mono\ 13
 else
 set guifont=Droid\ Sans\ Mono\ 8
 endif
