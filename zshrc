@@ -232,3 +232,7 @@ xrandrdpi()
 
 # added by travis gem
 [ -f /home/alice/.travis/travis.sh ] && source /home/alice/.travis/travis.sh
+source /usr/share/nvm/init-nvm.sh
+
+# Set up rbenv
+eval "$(rbenv init -)"
