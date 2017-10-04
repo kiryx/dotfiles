@@ -13,6 +13,7 @@
     ~/.dunstrc: dunstrc
     ~/.gitignore_global: gitignore_global
     ~/.i3: i3/
+    ~/.i3blocks.conf: i3/i3blocks.conf
     ~/.config/termite/config: termiterc
     ~/.config/mimeapps.list: mimeapps.list
     ~/.local/bin: bin/
