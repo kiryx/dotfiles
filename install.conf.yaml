@@ -9,6 +9,7 @@
     ~/.zshenv: zshenv
     ~/.vimperatorrc: vimperatorrc
     ~/.gitconfig: gitconfig
+    ~/.gnupg/gpg.conf: gpg.conf
     ~/.inputrc: inputrc
     ~/.dunstrc: dunstrc
     ~/.gitignore_global: gitignore_global

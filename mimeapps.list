@@ -4,8 +4,10 @@ x-scheme-handler/http=google-chrome.desktop
 x-scheme-handler/https=google-chrome.desktop
 x-scheme-handler/about=google-chrome.desktop
 x-scheme-handler/unknown=google-chrome.desktop
+x-scheme-handler/tg=telegramdesktop.desktop
 
 [Added Associations]
 x-scheme-handler/http=exo-web-browser.desktop
 x-scheme-handler/https=exo-web-browser.desktop
-
+application/pdf=wine-extension-pdf.desktop;
+x-unknown/octet-stream%22=evince.desktop;
