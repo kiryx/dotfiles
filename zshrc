@@ -51,6 +51,7 @@ ZSH_THEME="bureau"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git z vi-mode history-substring-search zsh-syntax-highlighting)
 
+DISABLE_AUTO_UPDATE=true  # Disable oh-my-zzh updates
 source $ZSH/oh-my-zsh.sh
 
 # bind k and j for VI mode
